@@ -16,7 +16,7 @@ RUN apt-get update \
     && rm -rf /usr/share/man \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install --break-system-packages --upgrade pip
+RUN pip3 install --break-system-packages --upgrade --ignore-installed pip
 RUN pip3 install --break-system-packages $PIP_PACKAGES
 
 RUN mkdir -p /etc/ansible
